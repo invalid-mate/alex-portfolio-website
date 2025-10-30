@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alex - UI/UX Designer Portfolio</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Scroll Progress Indicator -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- Navigation -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <div class="nav-logo">Alex</div>
+      <div class="nav-menu" id="navMenu">
+        <a href="#home" class="nav-link">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </div>
+      <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section id="home" class="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title fade-in">Hi, I'm Alex</h1>
+        <h2 class="hero-subtitle fade-in">UI/UX Designer</h2>
+        <p class="hero-description fade-in">Crafting intuitive and beautiful digital experiences that connect people with technology seamlessly</p>
+        <div class="hero-buttons fade-in">
+          <a href="#projects" class="btn btn--primary">View My Work</a>
+          <a href="#contact" class="btn btn--outline">Let's Talk</a>
+        </div>
+      </div>
+      <div class="hero-image fade-in">
+        <div class="profile-placeholder">
+          <span>A</span>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Statistics -->
+    <div class="stats-section">
+      <div class="stat-item fade-in">
+        <div class="stat-value" data-target="4">0</div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+      <div class="stat-item fade-in">
+        <div class="stat-value" data-target="50">0</div>
+        <div class="stat-label">Projects Completed</div>
+      </div>
+      <div class="stat-item fade-in">
+        <div class="stat-value" data-target="20">0</div>
+        <div class="stat-label">Happy Clients</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="about section-padding">
+    <div class="container">
+      <h2 class="section-title">About Me</h2>
+      <div class="about-content">
+        <div class="about-image">
+          <div class="profile-placeholder-large">
+            <span>Alex</span>
+          </div>
+        </div>
+        <div class="about-text">
+          <p class="about-bio">I'm Alex, a passionate UI/UX designer with over 4 years of experience creating user-centered digital experiences. I specialize in mobile app design, web applications, and design systems. My approach combines data-driven insights with creative problem-solving to deliver solutions that users love and businesses value.</p>
+          
+          <div class="experience-section">
+            <h3>Work Experience</h3>
+            <div class="timeline">
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <h4>Senior UI/UX Designer</h4>
+                  <p class="company">TechCorp Solutions</p>
+                  <p class="period">2022 - Present</p>
+                  <p class="description">Lead designer for B2B SaaS products, managed design system, mentored junior designers</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <h4>UI/UX Designer</h4>
+                  <p class="company">StartupHub Inc</p>
+                  <p class="period">2021 - 2022</p>
+                  <p class="description">Designed mobile apps and web platforms, conducted user research and usability testing</p>
+                </div>
+              </div>
+              <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="timeline-content">
+                  <h4>Junior Designer</h4>
+                  <p class="company">Creative Agency</p>
+                  <p class="period">2019 - 2021</p>
+                  <p class="description">Worked on branding projects, web design, and digital marketing materials</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div class="education-section">
+            <h3>Education</h3>
+            <div class="education-list">
+              <div class="education-item">
+                <h4>Master of Design in Interaction Design</h4>
+                <p class="institution">Design Institute of Technology</p>
+                <p class="period">2019 - 2021</p>
+              </div>
+              <div class="education-item">
+                <h4>Bachelor of Arts in Graphic Design</h4>
+                <p class="institution">Creative Arts University</p>
+                <p class="period">2015 - 2019</p>
+              </div>
+            </div>
+          </div>
+          
+          <button class="btn btn--primary download-btn">Download Resume</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="projects section-padding">
+    <div class="container">
+      <h2 class="section-title">My Projects</h2>
+      
+      <div class="project-filters">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="mobile">Mobile App</button>
+        <button class="filter-btn" data-filter="web">Web Application</button>
+        <button class="filter-btn" data-filter="ecommerce">E-commerce</button>
+      </div>
+      
+      <div class="projects-grid" id="projectsGrid">
+        <!-- Projects will be dynamically inserted here -->
+      </div>
+    </div>
+  </section>
+
+  <!-- Skills Section -->
+  <section id="skills" class="skills section-padding">
+    <div class="container">
+      <h2 class="section-title">Skills &amp; Expertise</h2>
+      
+      <div class="skills-grid">
+        <div class="skill-category">
+          <h3>Design Tools</h3>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Figma</span>
+                <span class="skill-percentage">95%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-progress="95"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Adobe XD</span>
+                <span class="skill-percentage">90%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-progress="90"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Sketch</span>
+                <span class="skill-percentage">85%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-progress="85"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Photoshop</span>
+                <span class="skill-percentage">80%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-progress="80"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Illustrator</span>
+                <span class="skill-percentage">75%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-progress="75"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <h3>UX Skills</h3>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">User Research</span>
+                <span class="skill-percentage">90%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-progress="90"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Wireframing</span>
+                <span class="skill-percentage">95%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-progress="95"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Prototyping</span>
+                <span class="skill-percentage">92%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-progress="92"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Usability Testing</span>
+                <span class="skill-percentage">88%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-progress="88"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Information Architecture</span>
+                <span class="skill-percentage">85%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-progress="85"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="skill-category">
+          <h3>Technical Skills</h3>
+          <div class="skill-list">
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">HTML/CSS</span>
+                <span class="skill-percentage">80%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-progress="80"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">JavaScript</span>
+                <span class="skill-percentage">70%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-progress="70"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">React Basics</span>
+                <span class="skill-percentage">65%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-progress="65"></div>
+              </div>
+            </div>
+            <div class="skill-item">
+              <div class="skill-info">
+                <span class="skill-name">Design Systems</span>
+                <span class="skill-percentage">90%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-progress="90"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" class="contact section-padding">
+    <div class="container">
+      <h2 class="section-title">Let's Work Together</h2>
+      
+      <div class="contact-content">
+        <div class="contact-form-wrapper">
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" id="name" name="name" class="form-control" required>
+              <span class="error-message" id="nameError"></span>
+            </div>
+            
+            <div class="form-group">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" id="email" name="email" class="form-control" required>
+              <span class="error-message" id="emailError"></span>
+            </div>
+            
+            <div class="form-group">
+              <label for="subject" class="form-label">Subject</label>
+              <input type="text" id="subject" name="subject" class="form-control" required>
+              <span class="error-message" id="subjectError"></span>
+            </div>
+            
+            <div class="form-group">
+              <label for="message" class="form-label">Message</label>
+              <textarea id="message" name="message" class="form-control" rows="5" required></textarea>
+              <span class="error-message" id="messageError"></span>
+            </div>
+            
+            <button type="submit" class="btn btn--primary btn--full-width">Send Message</button>
+            <div class="success-message" id="successMessage">Thank you! Your message has been sent successfully.</div>
+          </form>
+        </div>
+        
+        <div class="contact-info">
+          <div class="contact-item">
+            <div class="contact-icon">✉</div>
+            <div class="contact-details">
+              <h4>Email</h4>
+              <a href="mailto:alex.designer@email.com">alex.designer@email.com</a>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <div class="contact-icon">📱</div>
+            <div class="contact-details">
+              <h4>Phone</h4>
+              <a href="tel:+15551234567">+1 (555) 123-4567</a>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <div class="contact-details">
+              <h4>Location</h4>
+              <p>San Francisco, CA</p>
+            </div>
+          </div>
+          
+          <div class="social-links">
+            <h4>Connect With Me</h4>
+            <div class="social-icons">
+              <a href="https://linkedin.com/in/alexdesigner" target="_blank" class="social-link" aria-label="LinkedIn">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </a>
+              <a href="https://dribbble.com/alexdesigner" target="_blank" class="social-link" aria-label="Dribbble">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <path d="M8.56 2.75c4.37 6.03 6.02 9.42 8.03 17.5m2.54-15.38c-3.72 4.35-8.94 5.66-16.88 5.85m19.5 1.9c-3.5-.93-6.63-.82-8.94 0-2.58.92-5.01 2.86-7.44 6.32"></path>
+                </svg>
+              </a>
+              <a href="https://behance.net/alexdesigner" target="_blank" class="social-link" aria-label="Behance">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14 7h6M3 6.5C3 4.57 4.57 3 6.5 3h1C9.43 3 11 4.57 11 6.5S9.43 10 7.5 10H3V6.5zM3 14c0-1.93 1.57-3.5 3.5-3.5h2c1.93 0 3.5 1.57 3.5 3.5s-1.57 3.5-3.5 3.5h-2c-1.93 0-3.5-1.57-3.5-3.5zM16 13.5c0-2.21 1.79-4 4-4s4 1.79 4 4c0 2.21-1.79 4-4 4-2.21 0-4-1.79-4-4z"></path>
+                </svg>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        <p>&copy; 2025 Alex. All rights reserved.</p>
+        <div class="footer-social">
+          <a href="https://linkedin.com/in/alexdesigner" target="_blank" aria-label="LinkedIn">LinkedIn</a>
+          <a href="https://dribbble.com/alexdesigner" target="_blank" aria-label="Dribbble">Dribbble</a>
+          <a href="https://behance.net/alexdesigner" target="_blank" aria-label="Behance">Behance</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Project Modal -->
+  <div class="modal" id="projectModal">
+    <div class="modal-overlay" id="modalOverlay"></div>
+    <div class="modal-content">
+      <button class="modal-close" id="modalClose" aria-label="Close modal">&times;</button>
+      <div class="modal-body" id="modalBody">
+        <!-- Project details will be dynamically inserted here -->
+      </div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
